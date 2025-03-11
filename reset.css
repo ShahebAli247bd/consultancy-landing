@@ -1,0 +1,53 @@
+/* Reset margins, paddings, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove default styles from links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Reset list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove outline from inputs and buttons for better UI */
+input,
+button,
+textarea,
+select {
+    border: none;
+    outline: none;
+    font: inherit;
+}
+
+/* Ensure buttons and links have a consistent cursor */
+button {
+    cursor: pointer;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Set smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure consistent font rendering */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+}
