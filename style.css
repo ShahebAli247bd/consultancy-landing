@@ -5,23 +5,24 @@
 }
 /* GLOBAL */
 :root {
-    --light-gray: #f9f8f9; /* Light Gray */
+    --light-gray: #ebebeb; /* Light Gray */
     --pale-blue: #f2fcff; /* Pale Blue */
     --pure-white: #ffffff; /* Pure White */
     --deep-teal: #0f6e8c; /* Deep Teal */
     --soft-blue: #f4fbff; /* Soft Blue */
     --dark-cyan: #1282a6; /* Dark Cyan */
+    --dark-gray: #8c8c8c; /* Dark Cyan */
 }
 .wrapper {
 }
 
 .container {
-    height: 100%;
-    max-width: 1440px;
+    height: 100vh;
+    max-width: 1110px;
     margin: 0 auto;
-    width: 1440px;
+    width: 1110px;
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
 }
 .material-symbols-outlined {
@@ -40,6 +41,8 @@
     position: fixed;
     box-shadow: 10px 10px 10px var(--light-gray);
     padding: 0 20px;
+    z-index: 99999;
+    top: 0;
 }
 .header {
     display: flex;
@@ -156,12 +159,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: var(--light-gray);
-    padding: 120px 0 50px 0;
+    margin-top: 100px;
+    padding: 100px 0 100px 0;
 }
-.hero .container {
-    flex-direction: row-reverse;
+.hero .area {
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
 }
 .hero-copy {
     padding-right: 100px;
@@ -176,7 +181,7 @@
 .hero-copy p {
     font-size: 24px;
     line-height: 30px;
-    margin: 50px 0px;
+    margin: 40px 0px;
 }
 .hero-copy a {
     padding: 15px 20px;
@@ -186,7 +191,9 @@
     color: var(--pure-white);
     background: var(--deep-teal);
 }
-
+.hero-image {
+    width: 560px;
+}
 .hero-image img {
     width: 100%;
     max-width: 460px;
@@ -223,4 +230,89 @@
         margin: 0 auto;
         padding-bottom: 50px;
     }
+}
+
+/**
+ * Services
+ */
+.services {
+    background-color: var(--pale-blue);
+    height: 100vh;
+}
+
+.services-left h2 {
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.services-left p {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--dark-gray);
+    padding: 50px 0;
+    width: 80%;
+}
+.services-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+}
+
+.services-right .box {
+    padding: 20px;
+    background-color: var(--pure-white);
+    filter: drop-shadow(3px 3px 10px var(--light-gray));
+
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .services {
+    }
+}
+
+/**
+ * Counter
+ */
+.counter {
+    display: flex;
+    background-color: var(--deep-teal);
+    background-image: url("./assets/Patterns.png");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover; /* Adjust as needed */
+    color: var(--pure-white);
+}
+
+.counter .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    gap: 50px;
+    width: 100%;
+}
+.counter .copy h1 {
+    font-size: 48px;
+}
+.counter .copy p {
+    font-size: 18px;
+}
+.counter .number {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.box:nth-child(2) {
+    border-left: 1px solid var(--soft-blue);
+    border-right: 1px solid var(--soft-blue);
+    padding: 0 20px;
+}
+.box .count {
+    font-size: 48px;
+    font-weight: bold;
 }
